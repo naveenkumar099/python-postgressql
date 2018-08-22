@@ -15,6 +15,8 @@ RUN sudo apt install -y vim
 
 RUN sudo pip install Flask
 
+RUN sudo pip install psycopg2
+
 RUN pip install robotframework
 RUN pip install robotframework-sshlibrary
 RUN pip install robotframework-selenium2library
