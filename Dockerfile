@@ -26,20 +26,15 @@ EXPOSE 4000
 WORKDIR  /home
 
 RUN  mkdir -pv /home/templates/
-ADD app1.py /home
-ADD app2.py /home
-ADD app3.py /home
+
 ADD app4.py /home
-ADD dummy.py /home
-ADD tabledef.py /home
-RUN /usr/bin/python  tabledef.py
-RUN /usr/bin/python  dummy.py
  
 ADD index.html /home/templates
-ADD login1.html /home/templates
 
 RUN mkdir -pv /home/static/
+
 ADD style.css /home/static
-#ADD  /sbin/ifconfig /home
+ADD main.js /home/static
+
 ENTRYPOINT ["/usr/bin/python", "app4.py"] 
 #Added comment to checkin the file.
