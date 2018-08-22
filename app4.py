@@ -24,9 +24,10 @@ app = Flask(__name__)
 #    sslrootcert=path_to_postgresql_cert,
 #    database='compose')
 
+#PGPASSWORD=GGNIKEIYRSRYYMWL psql "sslmode=require host=sl-us-south-1-portal.31.dblayer.com port=53338 dbname=compose user=admin"
 
-conn = psycopg2.connect(host="localhost", database="pythonpostgres",
-                        user="postgres", password="post123")
+conn = psycopg2.connect(host="sl-us-south-1-portal.31.dblayer.com", database="compose",user="admin", password="GGNIKEIYRSRYYMWL")
+#conn = psycopg2.connect(host="localhost", database="pythonpostgres",user="postgres", password="post123")
 
 
 @app.route('/')
